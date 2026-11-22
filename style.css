@@ -82,18 +82,14 @@ body {
     gap: 15px;
     max-width: 700px;
     margin: 50px auto;
-    background: rgba(255, 255, 255, 0.25);
+  
 
 }
 .case {
-    overflow: visible;
-    background-color: #fffefa;
+    background-color: #9bafbd;
     border: 1px solid #d8c8a8;
     height: 130px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     font-size: 28px;
     color: #b69a68;
@@ -106,18 +102,42 @@ body {
     inset 0 0 8px rgba(255, 255, 255, 0.7);
     border-radius: 12px;
 
+}
+
+.porte{
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
     transform-origin: left center;
-    transition: transform 0.5s ease;
+    transition: transform 1.5s ease;
+    background-color: #fffefa;
 }
+
 .case:hover {
     transform: scale(1.05);
     border-color: #96743F;
-    transform: perspective(900px) rotateY(-75deg);
+}
 
+.porte.anim{
+    transform: perspective(2500px) rotateY(-75deg);
+}
+
+.case.position{
+    position: fixed;
+    z-index: 25;
+    width: 50%;
+    height: 70%;
+    top: 15%;
+    right: 25%;
+    transition: 1s ease;
 }
 
 .fenetre {
+    z-index: 100;
     display: none;
     position: fixed;
     top: 0;
@@ -131,7 +151,7 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 3s ease;
+    transition: opacity 1s ease;
 }
 
 .contenu {
@@ -139,7 +159,8 @@ body {
     padding: 40px;
     border: 1px solid #96743F;
     text-align: center;
-    width: 300px;
+    height: 200px;
+    width: 700px;
     position: relative;
 }
 
@@ -187,4 +208,49 @@ body {
         height: 100px;
         font-size: 22px;
     }
+    .case.position{
+        position: fixed;
+        z-index: 25;
+        width: 70%;
+        height: 50%;
+        top: 25%;
+        right: 15%;
+        transition: 1s ease;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    body{
+        margin: 10px;
+    }
+    #entete h1{
+        font-size: 25px;
+    }
+    #entete p{
+   
+    font-size: 15px;
+    }
+
+    .calendrier {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: 20px 10px;
+        padding: 12px;
+    }
+
+
+    .case.position{
+        position: fixed;
+        z-index: 25;
+        width: 70%;
+        height: 50%;
+        top: 25%;
+        right: 15%;
+        transition: 1s ease;
+    }
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }
