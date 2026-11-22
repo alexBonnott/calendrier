@@ -163,3 +163,28 @@ body {
 .case.accesible {
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    body{
+        margin: 10px;
+    }
+    #entete h1{
+        font-size: 25px;
+    }
+    #entete p{
+   
+    font-size: 15px;
+    }
+
+    .calendrier {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: 20px 10px;
+        padding: 12px;
+    }
+
+    .case {
+        height: 100px;
+        font-size: 22px;
+    }
+}
