@@ -175,7 +175,7 @@ body {
     border: 1px solid #96743F;
     text-align: center;
     max-width: 50%;
-    max-height: 95vh;
+    max-height: 95dvh;
     border-radius: 25px;
     position: relative;
     justify-content: center;
@@ -217,7 +217,7 @@ body {
     margin-bottom: 5px;
     box-shadow: 0 8px 20px rgba(180, 110, 135, 0.2);
     box-sizing: border-box;
-    max-height: 65vh;
+    max-height: 65dvh;
     position: relative;
 }
 
@@ -266,7 +266,7 @@ body {
     margin-top: 0px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transform: rotate(-2deg);
-    max-height: 90vh;
+    max-height: 90dvh;
 }
 
 .polaroid img {
@@ -293,7 +293,7 @@ body {
     max-width: 100%;
     border-radius: 25px;
     text-align: left;
-    height: 85vh;
+    height: 85dvh;
     font-family: 'VT323', monospace;
 }
 
