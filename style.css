@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 #entete{
     text-align: center;
 }
@@ -115,6 +122,9 @@ body {
     transform-origin: left center;
     transition: transform 1.5s ease;
     background-color: #fffefa;
+    box-shadow:
+        1px 1px 1px #d8c8a8,
+        inset -1px -1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .case:hover {
@@ -123,7 +133,7 @@ body {
 }
 
 .porte.anim{
-    transform: perspective(2500px) rotateY(-75deg);
+    transform: perspective(2500px) rotateY(-70deg);
 }
 
 .case.position{
@@ -155,16 +165,25 @@ body {
 }
 
 .contenu {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 50%;
     background-color: #fffefa;
-    padding: 40px;
+    padding: 20px;
+    padding-top: 10px;
     border: 1px solid #96743F;
     text-align: center;
-    height: 200px;
-    width: 700px;
+    max-width: 50%;
+    max-height: 95vh;
+    border-radius: 25px;
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .fermer {
+    
     position: absolute;
     top: 10px;
     right: 15px;
@@ -185,6 +204,161 @@ body {
     cursor: pointer;
 }
 
+.lettre {
+    font-family: 'Great Vibes', cursive;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: large;
+    text-align: left;
+    background: #FFFAF7;
+    border: 2px solid #E8B7C5;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 5px;
+    box-shadow: 0 8px 20px rgba(180, 110, 135, 0.2);
+    box-sizing: border-box;
+    max-height: 65vh;
+    position: relative;
+}
+
+.bisou {
+    position: absolute;
+    opacity: 0.45;
+    font-size: 30px;
+    pointer-events: none;
+}
+
+.bisou1 {
+    top: 15px;
+    right: 300px;
+    transform: rotate(20deg);
+}
+
+.bisou2 {
+    bottom: 35px;
+    left: 5px;
+    transform: rotate(-25deg);
+}
+
+.bisou3 {
+    top: 250px;
+    right: 5px;
+    transform: rotate(45deg);
+}
+
+.bisou4 {
+    bottom: 0px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.lettre p{
+    overflow-wrap: break-word;
+}
+
+.polaroid {
+    
+    background: white;
+    padding: 15px 15px 25px;
+    padding-bottom: 0;
+    max-width: 350px;
+    margin: 20px auto;
+    margin-top: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+    max-height: 90vh;
+}
+
+.polaroid img {
+    width: 100%;
+    max-height: 75vh;
+    display: block;
+    border-radius: 5px;
+}
+
+.polaroid p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    text-align: center;
+    color: #a76d83;
+    margin : 0;
+
+}
+
+.choix{
+    border: 2px groove black;
+    background-color: rgba(230, 144, 95, 0.712);
+    max-width: 100%;
+    border-radius: 25px;
+    text-align: left;
+    height: 82vh;
+    font-family: 'VT323', monospace;
+}
+
+.choix h2{
+    text-align: center;
+}
+
+.like{
+    position: absolute;
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 50px;
+    cursor: pointer;
+    right: 5%;
+    top : 5%;
+}
+
+#haut{
+    border-top: 3px groove gray ;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #a76d83;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px groove rgb(255, 255, 255);
+}
+
+#bas{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px groove rgb(255, 255, 255);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    
+}
+
+#bas p{
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+#bas a{
+    margin-right: 10px;
+}
+
+.musique{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 5px;
+    position: relative;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.choix iframe{
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
 @media screen and (max-width: 600px) {
     body{
         margin: 10px;
@@ -195,6 +369,10 @@ body {
     #entete p{
    
     font-size: 15px;
+    }
+
+    .contenu{
+        max-width: 100%;
     }
 
     .calendrier {
